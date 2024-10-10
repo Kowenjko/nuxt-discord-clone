@@ -7,20 +7,16 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			clerkPublishableKey: process.env.NUXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+			streamApiKey: process.env.NUXT_STREAM_API_KEY,
 		},
 		clerkSecretKey: process.env.NUXT_CLERK_SECRET_KEY,
+		streamSecret: process.env.NUXT_STREAM_SECRET,
 	},
 
 	fonts: {
 		families: [{ name: 'Inter', provider: 'google' }],
 	},
 
-	postcss: {
-		plugins: {
-			tailwindcss: {},
-			autoprefixer: {},
-		},
-	},
 	clerk: {
 		appearance: { variables: { colorPrimary: '#007ac2' } },
 	},
